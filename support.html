@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabootar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0px; /* Add margin */
+            padding: 0px; /* Add padding */
+            box-sizing: border-box;
+            background-color: #aaabb8; /* Grey background color */
+            color: #fff; /* White text color */
+        }
+
+        h1 {
+            color: #fff; /* White color for the text */
+            text-align: center;
+            padding: 20px;
+            background-color: #474787; /* Blue background color */
+            margin: 0; /* Remove default margin */
+        }
+
+        h2, h3, h4 {
+            color: #333;
+            text-align: center;
+        }
+
+        .question {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 25px;
+            cursor: pointer;
+        }
+
+        .answer {
+            display: none;
+            background-color: #fff;
+            padding: 10px;
+            margin-right: 25px;
+            color: #2c2c54; /* Black text color for better visibility */
+        }
+
+        /* Added styles for the new section */
+        .contact-section {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #474787; /* Black background color */
+            padding: 10px;
+        }
+
+        /* Style for the contact number background */
+        .contact-section h3 {
+            color: #fff; /* White text color for the section heading */
+        }
+
+        .contact-section strong {
+            background-color: #474787; /* Black background color for the contact number */
+            color: #fff; /* White text color for the contact number */
+            padding: 5px 10px; /* Add padding for better appearance */
+        }
+
+        /* Navbar styles */
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            background-color: #2c2c54;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(117, 118, 118);
+        }
+
+        .navbar li {
+            float: left;
+        }
+        .ship{
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="INDEX.HTML">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="trackerpage1.html">Track</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a  class="ship" href="ship.html">SHIP NOW  </a> </li>
+        </ul>
+    </nav>
+
+    <h1>Hello, Welcome to Kabootar's Support Center</h1>
+    <h2>How can we help you today?</h2>
+    <ul>
+
+    <li><div class="question" onclick="toggleAnswer('answer1')">How can I track my shipment?</div></li>
+    <div id="answer1" class="answer">
+        To track your shipment, you can download our app or go to the tracking page. Entering your tracking ID (AWB/LRN) and click on 'TRACK'. You can also login using your mobile number to view all shipments being delivered to you by Kabootar and reach out to our customer support.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer2')">Why is my package delayed?</div></li>
+    <div id="answer2" class="answer">
+        Your delivery may get delayed due to unforeseen circumstances. A new delivery timeframe will be shared with you when you track your shipment on our website. In case you have additional questions or concerns, please raise a support ticket from here. You can also contact us via our IVR number +91-8069856101.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer3')">My shipment status is still at 'Pick up.' What should I do?</div></li>
+    <div id="answer3" class="answer">
+        ‘Pick up pending’ status means that Kabootar hasn't received the physical shipment from the merchant with whom you have placed your order. Please contact your merchant from where you placed the order for further assistance.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer4')">What do I do if tracking page doesn't show the expected date of arrival?</div></li>
+    <div id="answer4" class="answer">
+        Kabootar will be able to provide estimated date of arrival only after the shipment has been picked up from the merchant. In the meantime, please contact your merchant from where you placed the order for further assistance.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer5')">My shipment is out for delivery. When will I receive it?</div></li>
+    <div id="answer5" class="answer">
+        Your shipment can be delivered to you anytime between 10:00 am and 8:00 pm on the same day when it is marked as out for delivery.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer6')">How can I get the delivery of my shipment if I missed it today?</div></li>
+    <div id="answer6" class="answer">
+        Do not worry if you missed your order. Kabootar usually attempts to deliver the shipment on the following business day if you have missed a delivery.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer7')">Why can I see no update to the status of my shipment?</div></li>
+    <div id="answer7" class="answer">
+        Kabootar tracking updates are accurate and real time. However, if due to unforeseen circumstances, your shipment has not moved in the last few days, you can raise a support ticket here.
+    </div>
+
+    <li><div class="question" onclick="toggleAnswer('answer8')">How can I get the contact number of my delivery partner?</div></li>
+    <div id="answer8" class="answer">
+        As a part of the company policy, we do not share the phone numbers of our delivery partners. However, please be assured that our representatives will contact you if they face any difficulty in locating your address.
+    </div>
+    </ul>
+    <!-- New section for contact information -->
+   <div class="contact-section">
+        <h3>Contact Us for Any Queries</h3>
+        <p>For any queries, please call us at <strong>9087654321</strong></p>
+    </div>
+    
+    <script>
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

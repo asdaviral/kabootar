@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Now - Parcel Delivery Service</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #aaabb8; /* Grey background color */
+        }
+
+        header {
+            background-color: #474787; /* Blue header color */
+            color: #fff;
+            text-align: center;
+            padding: 20px; /* Increased padding for header */
+        }
+
+        h1 {
+            margin: 0; /* Remove margin for h1 in header */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ececec; /* Cream yellow background color for the table */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px; /* Increased padding for input and select */
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745; /* Green color for the button */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block; /* Make the button a block element */
+            margin: auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green color on hover */
+        }
+
+        /* Style for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db; /* Blue header color for the table */
+            color: #fff;
+        }
+
+        /* Style for the image */
+        img {
+            width: 100%;
+            display: block;
+            margin: auto; /* Center the image */
+        }
+        .sh{
+            text-decoration: none;
+        
+        }
+        .navbar ul {
+            list-style-type: none;
+            background-color: #2c2c54;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: grey;
+        }
+
+        .navbar li {
+            float: left;
+        }
+        .ship{
+            background: rgb(0, 0, 0);
+            border-radius: 30px;
+          
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="INDEX.HTML">Home</a> </li>
+            <li><a href="services.html">Services</a> </li>
+            <li><a href="trackerpage1.html">Track</a> </li>
+            <li><a href="support.html">Support</a> </li>
+            <li><a href="about.html">About</a> </li>
+            <li><a  class="ship" href="ship.html">Ship Now</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to the Shipping Page</h1>
+    </header>
+
+    <section>
+        <form action="process_shipment.php" method="post" onsubmit="return redirectToConfirmationPage()">
+            <img src="mp.jpg" alt="Shipping Image">
+            <table>
+                <tr>
+                    <th>Shipping Type</th>
+                    <th>Pickup Pin Code</th>
+                    <th>Delivery Pin Code</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="shippingType">Shipping Type:</label>
+                        <select id="shippingType" name="shippingType" required>
+                            <option value="domestic">Domestic</option>
+                            <option value="international">International</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="Pickup Pin Code">Enter Pickup Pin Code:</label>
+                        <input type="text" id="Pickup Pin Code" name="Pickup Pin Code" required>
+                    </td>
+                    <td>
+                        <label for="Pickup Pin code">Enter Delivery Pin Code:</label>
+                        <input type="text" id="pin Code" name="pin Code" required>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- ... (existing form elements) ... -->
+
+            <button  type="submit"><a class="sh" href="page.html">SHIP NOW</a></button>
+            
+            
+        </form>
+    </section>
+
+    <script>
+        function redirectToConfirmationPage() {
+            // You can perform additional form validation here if needed
+            window.location.href = 'confirmation_page.html';
+            return false; // Prevents the form from submitting via the default method
+        }
+    </script>
+
+</body>
+</html>
+
+
+

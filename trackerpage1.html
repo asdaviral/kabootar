@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #aaabb8;
+        }
+
+        header {
+            background-color: #474787;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ececec;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto; /* Increased margin for more space */
+        }
+
+        .box {
+            background: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .otp-container {
+            display: none;
+        }
+        .navbar ul {
+            list-style-type: none;
+            background-color: #2c2c54;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: grey;
+        }
+
+        .navbar li {
+            float: left;
+        }
+        .ship{
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="INDEX.HTML">Home</a> </li>
+            <li><a href="services.html">Services</a> </li>
+            <li><a href="trackerpage1.html">Track</a> </li>
+            <li><a href="support.html">Support</a> </li>
+            <li><a href="about.html">About</a> </li>
+            <li><a  class="ship" href="ship.html">SHIP NOW  </a> </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Track Your Order</h1>
+    </header>
+
+    <div class="container" id="step1">
+        <img class="main-image" src="OR.jpg" alt="Order Image"> 
+
+        <div class="box">
+            <label for="mobile"> Order Id / Parcel Number / Mobile Number:</label>
+        </div>
+
+        <!-- Set the maxlength attribute to limit the number of digits -->
+        <input type="text" id="trackingInput" placeholder="Enter your Order Id/parcel number/ Mobile Number " maxlength="10">
+
+        <button  onclick="generateAndSendOtp()">Get OTP</button>
+    </div>
+
+    <div class="container otp-container" id="step2">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otpInput" placeholder="Enter the OTP">
+
+        <button onclick="trackOrder()"><a href="trackpage.html" >Track you Order</a></button>
+    </div>
+
+    <script>
+        function generateAndSendOtp() {
+            // Generate a random 6-digit OTP
+            const otp = Math.floor(100000 + Math.random() * 900000);
+            
+            // You can add your logic to send OTP here
+            alert(`OTP ${otp} sent to your mobile number.`);
+
+            // Show the OTP entry container
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
+
+        function trackOrder() {
+            // You can add your tracking logic here
+            alert('Order tracked successfully!');
+        }
+    </script>
+</body>
+</html>

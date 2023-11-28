@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <style>
+        .navbar ul {
+            list-style-type: none;
+            background-color: #2c2c54;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: grey;
+        }
+
+        .navbar li {
+            float: left;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #aaabb8; /* white background color */
+        }
+
+        header {
+            background-color: #474787; /* Blue header color */
+            color: #fff;
+            text-align: center;
+            padding: 20px; /* Increased padding for header */
+        }
+
+        h1 {
+            margin: 0; /* Remove margin for h1 in header */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ececec; /* Cream yellow background color for the table */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px; /* Increased padding for input and select */
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745; /* Green color for the button */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block; /* Make the button a block element */
+            margin: auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green color on hover */
+        }
+
+        /* Style for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db; /* Blue header color for the table */
+            color: #fff;
+        }
+
+        /* Style for the image */
+        img {
+            width: 100%;
+            display: block;
+            margin: auto; /* Center the image */
+        }
+        .ship{
+            background: rgb(0, 0, 0);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="INDEX.HTML">Home</a> </li>
+            <li><a href="services.html">Services</a> </li>
+            <li><a href="trackerpage1.html">Track</a> </li>
+            <li><a href="support.html">Support</a> </li>
+            <li><a href="about.html">About</a> </li>
+            <li><a  class="ship" href="ship.html">SHIP NOW  </a> </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Shipping Process</h1>
+    </header>
+
+    <!-- Section 1: Address Details -->
+    <section id="section1">
+        <h2>Section 1: Address Details</h2>
+        <table>
+            <tr>
+                <td>
+                    <label for="pickupAddress">Pickup Address:</label>
+                    <input type="text" id="pickupAddress" name="pickupAddress" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="deliveryAddress">Delivery Address:</label>
+                    <input type="text" id="deliveryAddress" name="deliveryAddress" required>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="nextSection()">Proceed to Next</button>
+    </section>
+
+    <!-- Section 2: Describe Package Content -->
+    <section id="section2">
+        <h2>Section 2: Describe Package Content</h2>
+        <label for="clothes">Clothes & Personal Items</label>
+        <input type="checkbox" id="clothes" name="packageContent" value="clothes">
+    
+        <label for="consumables">Consumables</label>
+        <input type="checkbox" id="consumables" name="packageContent" value="consumables">
+    
+        <label for="books">Books & Documents</label>
+        <input type="checkbox" id="books" name="packageContent" value="books">
+    
+        <label for="electronics">Electronics</label>
+        <input type="checkbox" id="electronics" name="packageContent" value="electronics">
+    
+        <label for="household">Household Items</label>
+        <input type="checkbox" id="household" name="packageContent" value="household">
+    
+        <label for="sports">Sports Equipment</label>
+        <input type="checkbox" id="sports" name="packageContent" value="sports">
+    
+        <label for="other">Other</label>
+        <input type="checkbox" id="other" name="packageContent" value="other">
+    
+        <button type="button" onclick="proceedToSection3()">Proceed to Next</button>
+    </section>
+
+    <!-- Section 3: Describe Your Package -->
+    <section id="section3">
+        <h2>Section 3: Describe Your Package</h2>
+        <label for="document">Document / Envelope</label>
+        <input type="radio" id="document" name="packageType" value="document">
+
+        <label for="pouch">Pouch / Plastic</label>
+        <input type="radio" id="pouch" name="packageType" value="pouch">
+
+        <label for="personalBag">Personal Bag</label>
+        <input type="radio" id="personalBag" name="packageType" value="personalBag">
+
+        <label for="carton">Carton</label>
+        <input type="radio" id="carton" name="packageType" value="carton">
+
+        <label for="shoeBox">Shoe Box</label>
+        <input type="radio" id="shoeBox" name="packageType" value="shoeBox">
+
+        <label for="suitcase">Suitcase</label>
+        <input type="radio" id="suitcase" name="packageType" value="suitcase">
+
+        <label for="others">Others, Please Specify:</label>
+        <input type="text" id="others" name="packageTypeOther">
+
+        <button type="button" onclick="proceedToSection4()">Proceed to Next</button>
+    </section>
+
+    <!-- Section 4: Choose Package Size -->
+    <section id="section4">
+        <h2>Section 4: Choose Package Size</h2>
+        <label for="xs">XS (1 - 500 GM)</label>
+        <input type="radio" id="xs" name="packageSize" value="XS">
+    
+        <label for="s">S (500 GM - 2KG)</label>
+        <input type="radio" id="s" name="packageSize" value="S">
+    
+        <label for="m">M (2KG - 5KG)</label>
+        <input type="radio" id="m" name="packageSize" value="M">
+    
+        <label for="l">L (5KG - 10KG)</label>
+        <input type="radio" id="l" name="packageSize" value="L">
+    
+        <button type="button" onclick="proceedToSection5()">Proceed to Next</button>
+    </section>
+
+    <!-- Section 5: Schedule Your Pickup -->
+    <section id="section5">
+        <h2>Section 5: Schedule Your Pickup</h2>
+        <label for="pickupDay">Select Pickup Day:</label>
+        <input type="date" id="pickupDay" name="pickupDay" min="2023-11-25" required>
+        <p>Book before 2 pm to get Same-Day Pickup at your doorstep.</p>
+        <button type="button" onclick="proceedToSection6()">Proceed to Next</button>
+    </section>
+
+
+    <!-- Section 6: Summary Details -->
+    <section id="section6">
+        <h2>Section 6: Summary Details</h2>
+
+    <!-- ADDRESS DETAILS -->
+    <h3>ADDRESS DETAILS</h3>
+    <table>
+        <tr>
+            <td>Pickup Address:</td>
+            <td><span id="summaryPickupAddress"></span></td>
+        </tr>
+        <tr>
+            <td>Delivery Address:</td>
+            <td><span id="summaryDeliveryAddress"></span></td>
+        </tr>
+    </table>
+    <button type="button" onclick="editSection1()">Update</button>
+
+    <!-- PACKAGE DETAILS -->
+    <h3>PACKAGE DETAILS</h3>
+    <table>
+        <tr>
+            <td>Package Content:</td>
+            <td><span id="summaryPackageContent"></span></td>
+        </tr>
+        <tr>
+            <td>Package Type:</td>
+            <td><span id="summaryPackageType"></span></td>
+        </tr>
+        <tr>
+            <td>Package Size:</td>
+            <td><span id="summaryPackageSize"></span></td>
+        </tr>
+        <tr>
+            <td>Value:</td>
+            <td>₹<span id="summaryPackageValue"></span></td>
+        </tr>
+    </table>
+    <button type="button" onclick="editSection2()">Update</button>
+
+    <!-- PICKUP SCHEDULE -->
+    <h3>PICKUP SCHEDULE</h3>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td><span id="summaryPickupDate"></span></td>
+        </tr>
+        <tr>
+            <td>Time Slot:</td>
+            <td><span id="summaryPickupTime"></span></td>
+        </tr>
+    </table>
+    <button type="button" onclick="editSection5()">Update</button>
+
+    <!-- Increase spacing -->
+    <div style="margin-top: 20px;"></div>
+
+
+        <!-- Confirm Now Button -->
+        <button type="button" onclick="confirmNow()">PLACE ORDER</button>
+    </section>
+
+    <section id="section7" style="display: none;">
+        <img src="mp8.webp">
+        <h2>Your Order is Placed</h2>
+        <p>Your order has been successfully placed. Thank you for choosing our services!</p>
+        <p>An email confirmation with the order details will be sent to you shortly.</p>
+        <p>If you have any questions or need further assistance, please contact our customer support.</p>
+    </section>
+
+    <!-- JavaScript functions remain unchanged -->
+    <script>
+        function confirmNow() {
+        // Validate the form before proceeding to confirmation
+        if (validateForm()) {
+            document.getElementById('section6').style.display = 'none';
+            document.getElementById('section7').style.display = 'block';
+        }
+    }
+
+    function validateForm() {
+        // Validate each section before proceeding to the next
+        if (!validateSection1()) {
+            alert("Please fill in all the address details.");
+            return false;
+        }
+
+        if (!validateSection2()) {
+            alert("Please select at least one package content.");
+            return false;
+        }
+
+        if (!validateSection3()) {
+            alert("Please select a package type.");
+            return false;
+        }
+
+        if (!validateSection4()) {
+            alert("Please select a package size.");
+            return false;
+        }
+
+        if (!validateSection5()) {
+            alert("Please select a pickup day.");
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateSection1() {
+        // Add validation logic for Section 1
+        return document.getElementById('pickupAddress').value.trim() !== '' &&
+            document.getElementById('deliveryAddress').value.trim() !== '';
+    }
+
+    function validateSection2() {
+        // Add validation logic for Section 2
+        return document.querySelectorAll('input[name="packageContent"]:checked').length > 0;
+    }
+
+    function validateSection3() {
+        // Add validation logic for Section 3
+        return document.querySelector('input[name="packageType"]:checked') !== null;
+    }
+
+    function validateSection4() {
+        // Add validation logic for Section 4
+        return document.querySelector('input[name="packageSize"]:checked') !== null;
+    }
+
+    function validateSection5() {
+        // Add validation logic for Section 5
+        return document.getElementById('pickupDay').value.trim() !== '';
+    }
+        function confirmNow() {
+            // You can add logic here to perform any actions when the user confirms the details
+            // For example, showing an alert message or updating the backend
+            document.getElementById('section6').style.display = 'none';
+            document.getElementById('section7').style.display = 'block';
+        }
+        function nextSection() {
+            document.getElementById('section1').style.display = 'none';
+            document.getElementById('section2').style.display = 'block';
+        }
+
+        function proceedToSection3() {
+            document.getElementById('section2').style.display = 'none';
+            document.getElementById('section3').style.display = 'block';
+        }
+
+        function proceedToSection4() {
+            document.getElementById('section3').style.display = 'none';
+            document.getElementById('section4').style.display = 'block';
+        }
+
+        function proceedToSection5() {
+            document.getElementById('section4').style.display = 'none';
+            document.getElementById('section5').style.display = 'block';
+        }
+
+        function proceedToSection6() {
+            document.getElementById('section5').style.display = 'none';
+            document.getElementById('section6').style.display = 'block';
+
+            // Update Summary Details
+            document.getElementById('summaryPickupAddress').innerText = document.getElementById('pickupAddress').value;
+            document.getElementById('summaryDeliveryAddress').innerText = document.getElementById('deliveryAddress').value;
+
+            let packageContent = '';
+            document.querySelectorAll('input[name="packageContent"]:checked').forEach(item => {
+                packageContent += item.value + ', ';
+            });
+            document.getElementById('summaryPackageContent').innerText = packageContent.slice(0, -2);
+
+            document.getElementById('summaryPackageType').innerText = document.querySelector('input[name="packageType"]:checked').value;
+
+            let selectedPackageSize = document.querySelector('input[name="packageSize"]:checked').value;
+            let packageValue = 0;
+
+            switch (selectedPackageSize) {
+                case 'XS':
+                    packageValue = 600;
+                    break;
+                case 'S':
+                    packageValue = 900;
+                    break;
+                case 'M':
+                    packageValue = 1200;
+                    break;
+                case 'L':
+                    packageValue = 1500;
+                    break;
+                default:
+                    // default value or error handling
+                    packageValue = 0;
+                    break;
+            }
+
+            document.getElementById('summaryPackageSize').innerText = selectedPackageSize;
+            document.getElementById('summaryPackageValue').innerText = packageValue;
+
+            let pickupDay = document.getElementById('pickupDay').value;
+            document.getElementById('summaryPickupDate').innerText = pickupDay;
+
+            // You may calculate the pickup time slot based on user input and update it here
+            document.getElementById('summaryPickupTime').innerText = '07:00 - 19:00'; // Example time slot
+        }
+
+        function editSection1() {
+            document.getElementById('section6').style.display = 'none';
+            document.getElementById('section1').style.display = 'block';
+        }
+
+        function editSection2() {
+            document.getElementById('section6').style.display = 'none';
+            document.getElementById('section2').style.display = 'block';
+        }
+
+        function editSection5() {
+            document.getElementById('section6').style.display = 'none';
+            document.getElementById('section5').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

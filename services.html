@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ececec; /* Grey background color for the page */
+        }
+
+        header {
+            background-color: #474787;
+            color: #fff;
+            text-align: center;
+            padding: 10px; /* Decreased padding for a smaller header */
+            font-size: 15px; /* Decreased font size for a smaller header */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box-container {
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #aaabb8; /* Blue background color for the box */
+            margin-bottom: 20px;
+            margin-top: 20px; /* Add margin to create a gap between header and box */
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            margin: 0 20px; /* Add margin to the left and right sides */
+        }
+
+        .service-box {
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            background-color: #fffafa; /* Cream background color for the box */
+        }
+
+        h2 {
+            color: #2196F3; /* Changed the color for better visibility */
+        }
+
+        p {
+            color: #666;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .service-box img {
+            max-width: 100%;
+            height: 200px; /* Set the desired height */
+            margin-bottom: 15px; /* Optional: Add margin to separate image from text */
+        }
+
+        /* Adjust the size of the wt image */
+        img {
+            width: 100%; /* Set the width to 100% */
+            height: auto;
+            
+            display: block; /* Remove extra space below image */
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Navbar styles */
+        .navbar ul {
+            list-style-type: none;
+            background-color: #2c2c54;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: grey;
+        }
+
+        .navbar li {
+            float: left;
+        }
+        
+        .cross {
+            text-decoration: none;
+        }
+        
+        .full {
+            text-decoration: none;
+        }
+        
+        .part {
+            text-decoration: none;
+        }
+
+        .front-image-container {
+            padding: 10px;
+        }
+
+        .front-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .ship{
+            background: rgb(0, 0, 0);
+            border-radius: 30px;
+          
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="INDEX.HTML">Home</a> </li>
+            <li><a href="services.html">Services</a> </li>
+            <li><a href="trackerpage1.html">Track</a> </li>
+            <li><a href="support.html">Support</a> </li>
+            <li><a href="about.html">About</a> </li>
+            <li><a  class="ship" href="ship.html">SHIP NOW  </a> </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Shipping Services</h1>
+    </header>
+
+    <div class="container">
+        <div class="box-container">
+            <div class="front-image-container">
+                <img src="WP09.webp" alt="WT Image">
+            </div>
+            <section>
+                <div class="service-box">
+                    <img src="pt.jpg" alt="Part Truckload Image">
+                    <h2>Part Truckload</h2>
+                    <p>We offer efficient truckload shipping services for your parcels.</p>
+                    <button><a class="part" href="part.html">Learn More</a></button>
+                </div>
+
+                <div class="service-box">
+                    <img src="ft.jpg" alt="Full Truckload Image">
+                    <h2>Full Truckload</h2>
+                    <p>Experience the convenience of full truckload shipping for larger shipments.</p>
+                    <button><a class="full" href="full.html">Learn More</a></button>
+                </div>
+
+                <div class="service-box">
+                    <img src="cb.jpg" alt="Cross Border Image">
+                    <h2>Cross Border</h2>
+                    <p>Explore our cross-border shipping solutions for international deliveries.</p>
+                    <button><a class="cross" href="cross.html">Learn More</a></button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
